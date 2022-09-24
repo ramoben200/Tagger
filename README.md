@@ -1,5 +1,5 @@
 # Tagger Bot 🇹🇷
-[Tagger Bot](https://t.me/StarTaggerBot) Telegram Etiket Botu .
+[Tagger Bot](https://t.me/Ballasresmi) Telegram Etiket Botu .
 
 # Support 
 [Support](https://t.me/Ballasresmi) Telegram Support Grub .

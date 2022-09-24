@@ -74,14 +74,14 @@ async def info(event):
   await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim:  Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
                     buttons=(
                       [
-                       Button.url('Beni Grubuna Ekle ➕', 'https://t.me/Ballasresmi?startgroup=a')
+                       Button.url('Beni Grubuna Ekle ➕', 'https://t.me/inekobasiTR?startgroup=a')
                       ],
                       [
-                       Button.url('📢 Kanal', 'https://t.me/Ballasresmi'),
-                       Button.url('🇹🇷 Sahibim', 'https://t.me/BOT_RAMO')
+                       Button.url('📢 Kanal', 'https://t.me/inekobasiTR'),
+                       Button.url('🇹🇷 Sahibim', 'https://t.me/uslanmazmurti')
                       ],
                       [
-                       Button.url('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', 'https://github.com/ramoben200/Tagger')
+                       Button.url('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', 'https://github.com/murti/Tagger')
                       ],
                     ),
                     link_preview=False
@@ -106,11 +106,11 @@ async def start(event):
                        Button.inline("Komutlar", data="komutlar")
                       ],
                       [
-                       Button.url('Beni Grubuna Ekle', 'https://t.me/Ballasresmi?startgroup=a'),
-                       Button.url('Kanal', 'https://t.me/Ballasresmi')
+                       Button.url('Beni Grubuna Ekle', 'https://t.me/inekobasiTR?startgroup=a'),
+                       Button.url('Ana Bot', 'https://t.me/murtix_bot')
                       ],
                       [
-                       Button.url('Sahibim', 'https://t.me/BOT_RAMO')
+                       Button.url('Sahibim', 'https://t.me/uslanmazmurti')
                       ],
                     ),
                     link_preview=False)
@@ -129,16 +129,16 @@ async def handler(event):
                        Button.inline("Komutlar", data="komutlar")
                       ],
                       [
-                       Button.url('Beni Grubuna Ekle', 'https://t.me/Ballasresmi?startgroup=a'),
-                       Button.url('Kanal', 'https://t.me/Ballasresmi')
+                       Button.url('Beni Grubuna Ekle', 'https://t.me/inekobasiTR?startgroup=a'),
+                       Button.url('Ana Bot', 'https://t.me/murtix_bot')
                       ],
                       [
-                       Button.url('Sahibim', 'https://t.me/Ballasresmi')
+                       Button.url('Sahibim', 'https://t.me/uslanmazmurti')
                       ],
                     ),
                     link_preview=False)
 
-# gece kusu
+# murti bey
 @client.on(events.callbackquery.CallbackQuery(data="komutlar"))
 async def handler(event):
     await event.edit(f"**Komutlarım:\n\n/all -text-\n/atag -text-\n/cancel - İşlemi Durdururum...\n\n❕ Yalnızca yöneticileri bu komutları kullanabilir.**", buttons=(
@@ -163,7 +163,7 @@ async def mentionall(event):
   global anlik_calisan
   rxyzdev_tagTot[event.chat_id] = 0
   if event.is_private:
-    return await event.respond("**Bu Komut Sadace Grublarda ve Kanallarda Kullanıma Bilir**")
+    return await event.respond("**Bu Komut Sadece Gruplarda ve Kanallarda Kullanılabilir Sahip:@uslanmazmurti **")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id):
@@ -180,9 +180,9 @@ async def mentionall(event):
     if msg == None:
         return await event.respond("**Eski Mesajlar için Üyelerden Bahsedemem! (gruba eklemeden önce gönderilen mesajlar)**")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**Bana Bir Metin Ver!**")
+    return await event.respond("**Bana Bir Metin Gönder!**")
   else:
-    return await event.respond("**Bir Mesajı Yanıtlayın veya Başkalarından Bahsetmem için Bana Bir Betin Verin!!**")
+    return await event.respond("**Bir Mesajı Yanıtlayın veya Başkalarından Bahsetmem için Bana Bir Metin Gönderin!!**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -231,7 +231,7 @@ async def mentionall(event):
 async def mentionalladmin(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu Komut Yalnızca Grublarda Ve Kanallarda Kullanıma Bilir!**")
+    return await event.respond("**Bu Komut Yalnızca Grublarda Ve Kanallarda Kullanılbilir!**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id):
@@ -702,5 +702,5 @@ class LAN(object):
         TOTAL_BLOCK = "🚷 **Ümumi əngəllənən:** `{}`\n\n{}"
 
 app.run()
-print(">> Bot çalışıyor @BOT_RAMO Tarafından Kuruldu<<")
+print(">> Bot çalışıyor @uslanmazmurti Tarafından Kuruldu<<")
 client.run_until_disconnected()

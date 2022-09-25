@@ -74,14 +74,14 @@ async def info(event):
   await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim:  Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
                     buttons=(
                       [
-                       Button.url('Beni Grubuna Ekle ➕', 'https://t.me/Ballasresmi?startgroup=a')
+                       Button.url('Beni Grubuna Ekle ➕', 'https://t.me/?startgroup=a')
                       ],
                       [
-                       Button.url('📢 Kanal', 'https://t.me/Ballasresmi'),
+                       Button.url('🇹🇷 sahibim', 'https://t.me/uslanmazmurti'),
                        Button.url('🇹🇷 Sahibim', 'https://t.me/BOT_RAMO')
                       ],
                       [
-                       Button.url('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', 'https://github.com/ramoben200/Tagger')
+                       
                       ],
                     ),
                     link_preview=False
@@ -129,11 +129,11 @@ async def handler(event):
                        Button.inline("Komutlar", data="komutlar")
                       ],
                       [
-                       Button.url('Beni Grubuna Ekle', 'https://t.me/Ballasresmi?startgroup=a'),
-                       Button.url('Kanal', 'https://t.me/Ballasresmi')
+                       Button.url('Beni Grubuna Ekle', 'https://t.me/?startgroup=a'),
+                       Button.url('Kanal', 'https://t.me/')
                       ],
                       [
-                       Button.url('Sahibim', 'https://t.me/Ballasresmi')
+                       Button.url('Sahibim', 'https://t.me/BOT_RAMO')
                       ],
                     ),
                     link_preview=False)
@@ -702,5 +702,5 @@ class LAN(object):
         TOTAL_BLOCK = "🚷 **Ümumi əngəllənən:** `{}`\n\n{}"
 
 app.run()
-print(">> Bot çalışıyor @BOT_RAMO Tarafından Kuruldu<<")
+print(">> Bot çalışıyor @BOT_RAMO ve @uslanmazmurti Tarafından Kuruldu<<")
 client.run_until_disconnected()
